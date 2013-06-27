@@ -18,31 +18,39 @@ Class layout{
 	}
 	
 	//
-	function createHeader(){
+	function createHeader($js_arr){
+		$js_str="";
+		//
+		foreach($js_arr as $j){
+			$js_str.=sprintf("<script src='%s' type='text/javascript'></script>",$j);
+		}
+		//
 		echo sprintf("	<html>
-				<head><meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'><title>%s</title>
-				<script src='../javascripts/d3/d3.v3.js' type='text/javascript'></script>
-				</head>");
+				<head><meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'><title></title>
+				<script src='../../javascripts/d3/d3.v3.min.js' type='text/javascript'></script>
+				%s
+				</head>
+				<body>",$js_str);
 	}
 	
 	//
 	function createFooter(){
-		echo sprintf("	<noframes><body></body></noframes>
+		echo sprintf("	</body>
 				</html>");
 	}
 	
 	//
-	function createFrameSet($frame_set){
-		$sizes="";
-		$frames="";
+	function createFrameSet($frame_arr){
+		$size_str="";
+		$frame_str="";
 		//
-		foreach($frame_set as $f){
-			$frames.=sprintf("<frame src='%s' name='%s' frameborder='1' marginwidth='0' marginheight='0' bordercolor='#999999'>",$f["url"],$f["name"]);
-			$sizes[]=$f["size"];
+		foreach($frame_arr as $f){
+			$frame_str.=sprintf("<frame src='%s' name='%s' frameborder='1' marginwidth='0' marginheight='0' bordercolor='#999999'>",$f["url"],$f["name"]);
+			$size_arr[]=$f["size"];
 		}
 		//
-		$sizes=implode(",",$sizes);
-		echo sprintf("<frameset rows='*' cols='%s' framespacing='1' frameborder='1' border='2' bordercolor='#999999'>%s</frameset>",$sizes,$frames);
+		$size_str=implode(",",$size_arr);
+		echo sprintf("<frameset rows='*' cols='%s' framespacing='1' frameborder='1' border='2' bordercolor='#999999'>%s</frameset>",$size_str,$frame_str);
 	}
 }
 //
