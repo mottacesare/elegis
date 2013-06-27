@@ -6,9 +6,23 @@ Class layout{
 	}
 	
 	//
-	function createHeader($title){
+	function createIndexHeader($title){
 		echo sprintf("	<html>
 				<head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\"><title>%s</title></head>",$title);
+	}
+	
+	//
+	function createIndexFooter(){
+		echo sprintf("	<noframes><body></body></noframes>
+				</html>");
+	}
+	
+	//
+	function createHeader(){
+		echo sprintf("	<html>
+				<head><meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'><title>%s</title>
+				<script src='../javascripts/d3/d3.v3.js' type='text/javascript'></script>
+				</head>");
 	}
 	
 	//
