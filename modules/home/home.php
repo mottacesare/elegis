@@ -2,7 +2,8 @@
 //
 require_once("../../include.php");
 //
-$l->createHeader(array("home.js"));
+$l->createHeader();
+$l->addJavascripts(array("javascripts/home.js"));
 $l->createFooter();
 //
 ?>
