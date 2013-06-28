@@ -2,6 +2,7 @@
 //
 require_once("../../include.php");
 //
-echo "menu";
+$l->createHeader();
+$l->createFooter();
 //
 ?>
