@@ -3,7 +3,7 @@
 require_once("../../include.php");
 //
 $l->createHeader();
-$l->addJavascripts(array("javascripts/home.js"));
+$l->addJavascripts(array("javascripts/bubble_chart.js"));
 $l->createFooter();
 //
 ?>

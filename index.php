@@ -4,19 +4,19 @@ require_once("include.php");
 //create header
 $l->createIndexHeader($def_title);
 //create menu
-$frame_set=array(
+$frame_arr=array(
 	array(
 		"name"=>"leftFrame",
 		"url"=>"modules/menu/menu.php",
 		"size"=>"8%",
 	),
 	array(
-		"name"=>"centerFrame",
+		"name"=>"rightFrame",
 		"url"=>"modules/home/home.php",
 		"size"=>"*",
 	),
 );
-$l->createFrameSet($frame_set);
+$l->createFrameSet($frame_arr);
 //create footer
 $l->createIndexFooter();
 //
