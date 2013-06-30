@@ -8,7 +8,7 @@ $frame_arr=array(
 	array(
 		"name"=>"leftFrame",
 		"url"=>"modules/menu/menu.php",
-		"size"=>"8%",
+		"size"=>"44px",
 	),
 	array(
 		"name"=>$def_right_frame,
