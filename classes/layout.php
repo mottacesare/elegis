@@ -60,6 +60,17 @@ Class layout{
 		$size_str=implode(",",$size_arr);
 		echo sprintf("<frameset rows='*' cols='%s' framespacing='1' frameborder='1' border='2' bordercolor='#ffffff'>%s</frameset>",$size_str,$frame_str);
 	}
+	
+	//
+	function createIconMenu($images_arr,$frame){
+		$img_str="";
+		//
+		foreach($images_arr as $i){
+			$img_str.=sprintf("<div> <a href='%s' alt='%s' target='%s'> <img class='img_menu' src='%s'></img> </a> </div> <br/>",$i["url"],$i["name"],$frame,$i["img_src"]);
+		}
+		//
+		echo $img_str;
+	}
 }
 //
 ?>

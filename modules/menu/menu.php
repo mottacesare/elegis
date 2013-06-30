@@ -3,6 +3,32 @@
 require_once("../../include.php");
 //
 $l->createHeader();
+//creazione di un array per le icone del menu
+$images_arr=array(
+	array(
+		"name"=>"Home",
+		"url"=>"../../test.php",
+		"img_src"=>"../../images/home.png",
+	),
+	array(
+		"name"=>"Bevande",
+		"url"=>"../home/home.php",
+		"img_src"=>"../../images/home.png",
+	),
+	array(
+		"name"=>"Vivande",
+		"url"=>"../home/home.php",
+		"img_src"=>"../../images/home.png",
+	),
+	array(
+		"name"=>"Messaggi",
+		"url"=>"../home/home.php",
+		"img_src"=>"../../images/home.png",
+	),
+);
+//
+$l->createIconMenu($images_arr,$def_right_frame);
+//
 $l->createFooter();
 //
 ?>

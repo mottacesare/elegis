@@ -11,7 +11,7 @@ $frame_arr=array(
 		"size"=>"8%",
 	),
 	array(
-		"name"=>"rightFrame",
+		"name"=>$def_right_frame,
 		"url"=>"modules/home/home.php",
 		"size"=>"*",
 	),
