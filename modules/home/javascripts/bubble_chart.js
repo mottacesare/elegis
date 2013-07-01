@@ -17,7 +17,7 @@ d3.json("bubble_chart.json", function(error, root) {
 		.data(bubble.nodes(classes(root))
 		.filter(function(d) { return !d.children; }))
 		.enter().append("g")
-		.attr("class", "d3_node")
+		.attr("class", "d3_bc_node")
 		.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 	
 	node.append("title")
