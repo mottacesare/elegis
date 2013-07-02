@@ -66,7 +66,7 @@ Class layout{
 		$img_str="";
 		//
 		foreach($images_arr as $i){
-			$img_str.=sprintf("<div> <a href='%s' alt='%s' target='%s'> <img class='img_menu' src='%s'></img> </a> </div> <br/>",$i["url"],$i["name"],$frame,$i["img_src"]);
+			$img_str.=sprintf("<div class='menu_div'> <a href='%s' alt='%s' target='%s'> <img class='menu_img' src='%s'></img> </a> </div> ",$i["url"],$i["name"],$frame,$i["img_src"]);
 		}
 		//
 		echo $img_str;

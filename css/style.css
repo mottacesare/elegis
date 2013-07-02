@@ -1,18 +1,24 @@
-
+/*page*/
 .page_body{
 	background-color:#dddddd;
 }
 
-.img_menu{
-	width:40px;
-	height:40px;
-	padding:2px
+
+/*menu*/
+.menu_div{
+	padding:10pt;
 }
 
+.menu_img{
+	max-height:100%;
+	max-width:100%;
+}
+
+
+/*d3 javascripts*/
 .d3_bc_node{
 	font-size:10px;
 }
-
 
 .d3_bac_axis path,.d3_bac_axis line {
 	font-family:sans-serif;

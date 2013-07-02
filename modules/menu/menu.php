@@ -7,22 +7,22 @@ $l->createHeader();
 $images_arr=array(
 	array(
 		"name"=>"Home",
-		"url"=>"../../test.php",
+		"url"=>"../home/home.php",
 		"img_src"=>"../../images/home.svg",
 	),
 	array(
 		"name"=>"Bevande",
-		"url"=>"../home/home.php",
+		"url"=>"../../test.php",
 		"img_src"=>"../../images/drink.svg",
 	),
 	array(
 		"name"=>"Vivande",
-		"url"=>"../home/home.php",
+		"url"=>"../../test.php",
 		"img_src"=>"../../images/food.svg",
 	),
 	array(
 		"name"=>"Messaggi",
-		"url"=>"../home/home.php",
+		"url"=>"../../test.php",
 		"img_src"=>"../../images/message.svg",
 	),
 );
