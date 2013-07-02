@@ -12,17 +12,17 @@ $images_arr=array(
 	),
 	array(
 		"name"=>"Bevande",
-		"url"=>"../../test.php",
+		"url"=>"../drink/drink.php",
 		"img_src"=>"../../images/drink.svg",
 	),
 	array(
 		"name"=>"Vivande",
-		"url"=>"../../test.php",
+		"url"=>"../food/food.php",
 		"img_src"=>"../../images/food.svg",
 	),
 	array(
 		"name"=>"Messaggi",
-		"url"=>"../../test.php",
+		"url"=>"../message/message.php",
 		"img_src"=>"../../images/message.svg",
 	),
 );
