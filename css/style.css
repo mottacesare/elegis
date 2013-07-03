@@ -7,6 +7,11 @@
 /*menu*/
 .menu_div{
 	padding:10pt;
+	filter:alpha(opacity=100); -moz-opacity: 1.0; opacity: 1.0
+}
+
+.menu_div:hover{
+	background-color:#bbbbbb;
 }
 
 .menu_img{
