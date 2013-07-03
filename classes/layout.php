@@ -85,8 +85,11 @@ Class layout{
 	//
 	function createListRow(){
 		echo sprintf("	<div class='page_list_row'>
-					<div style='float:left;font-size:20px;'>%s</div>
-				</div>",$page_title,$title);
+					<div class='page_list_field' style='width:10%s;'><span>we</span></div>
+					<div class='page_list_field' style='width:20%s;'><span>ciao</span></div>
+					<div class='page_list_field' style='width:30%s;'><span>testttttttttt</span></div>
+					<div class='page_list_field' style='width:40%s;'><span>wella</span></div>
+				</div>","%","%","%","%");
 	}
 }
 //
