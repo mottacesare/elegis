@@ -58,7 +58,7 @@ Class layout{
 		}
 		//
 		$size_str=implode(",",$size_arr);
-		echo sprintf("<frameset rows='*' cols='%s' framespacing='%s' frameborder='1' border='%s' bordercolor='#ffffff'>%s</frameset>",$size_str,$border,$border,$frame_str);
+		echo sprintf("<frameset rows='*' cols='%s' framespacing='%s' frameborder='1' border='%s' noresize bordercolor='#ffffff'>%s</frameset>",$size_str,$border,$border,$frame_str);
 	}
 	
 	//
