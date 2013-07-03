@@ -21,8 +21,16 @@
 	padding-right:10px;
 	padding-top:6px;
 	padding-bottom:2px;
-	height:25px;
+	height:28px;
 	background-color:#888888;
+}
+
+/*list row*/
+.page_list_row{
+	padding-left:2px;
+	padding-top:2px;
+	height:20px;
+	background-color:#eeeeee;
 }
 
 /*menu*/

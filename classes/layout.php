@@ -81,6 +81,13 @@ Class layout{
 					<div class='font_rez' style='float:right;font-size:25px;'>%s</div>
 				</div>",$page_title,$title);
 	}
+	
+	//
+	function createListRow(){
+		echo sprintf("	<div class='page_list_row'>
+					<div style='float:left;font-size:20px;'>%s</div>
+				</div>",$page_title,$title);
+	}
 }
 //
 ?>
