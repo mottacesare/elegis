@@ -48,17 +48,17 @@ Class layout{
 	}
 	
 	//
-	function createFrameSet($frame_arr){
+	function createFrameSet($frame_arr,$border=10){
 		$size_str="";
 		$frame_str="";
 		//
 		foreach($frame_arr as $f){
-			$frame_str.=sprintf("<frame src='%s' name='%s' frameborder='1' marginwidth='0' marginheight='0' bordercolor='#ffffff'>",$f["url"],$f["name"]);
+			$frame_str.=sprintf("<frame src='%s' name='%s' frameborder='0' marginwidth='0' marginheight='0' bordercolor='#ffffff'>",$f["url"],$f["name"]);
 			$size_arr[]=$f["size"];
 		}
 		//
 		$size_str=implode(",",$size_arr);
-		echo sprintf("<frameset rows='*' cols='%s' framespacing='1' frameborder='1' border='2' bordercolor='#ffffff'>%s</frameset>",$size_str,$frame_str);
+		echo sprintf("<frameset rows='*' cols='%s' framespacing='%s' frameborder='1' border='%s' bordercolor='#ffffff'>%s</frameset>",$size_str,$border,$border,$frame_str);
 	}
 	
 	//
