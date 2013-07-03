@@ -3,7 +3,7 @@
 require_once("../../include.php");
 //
 $l->createHeader();
-echo "Message";
+$l->createPageTitleBar($def_title,$dict["TITLE_MESSAGE"]);
 $l->createFooter();
 //
 ?>
