@@ -6,22 +6,22 @@ $l->createHeader();
 //creazione di un array per le icone del menu
 $images_arr=array(
 	array(
-		"name"=>"Home",
+		"name"=>$dict["TITLE_HOME"],
 		"url"=>"../home/home.php",
 		"img_src"=>"../../images/home.svg",
 	),
 	array(
-		"name"=>"Bevande",
+		"name"=>$dict["TITLE_DRINK"],
 		"url"=>"../drink/drink.php",
 		"img_src"=>"../../images/drink.svg",
 	),
 	array(
-		"name"=>"Vivande",
+		"name"=>$dict["TITLE_FOOD"],
 		"url"=>"../food/food.php",
 		"img_src"=>"../../images/food.svg",
 	),
 	array(
-		"name"=>"Messaggi",
+		"name"=>$dict["TITLE_MESSAGE"],
 		"url"=>"../message/message.php",
 		"img_src"=>"../../images/message.svg",
 	),
