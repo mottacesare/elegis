@@ -48,7 +48,7 @@ Class layout{
 	}
 	
 	//
-	function createFrameSet($frame_arr,$border=10){
+	function createFrameSet($frame_arr,$border=5){
 		$size_str="";
 		$frame_str="";
 		//
