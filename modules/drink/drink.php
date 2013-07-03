@@ -3,7 +3,7 @@
 require_once("../../include.php");
 //
 $l->createHeader();
-echo "Drink";
+$l->createPageTitleBar($def_title,$dict["DRINKS"]);
 $l->createFooter();
 //
 ?>

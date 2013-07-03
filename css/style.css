@@ -1,8 +1,29 @@
+/*fonts*/
+@font-face {
+	font-family: 'REZ';
+	src: url('fonts/REZ.ttf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.font_rez{
+	font-family:'REZ',Sans-Serif;
+}
+
 /*page*/
 .page_body{
 	background-color:#dddddd;
+	font-family:Terminus,Arial;
 }
 
+.page_title_bar{
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:6px;
+	padding-bottom:2px;
+	height:25px;
+	background-color:#888888;
+}
 
 /*menu*/
 .menu_div{

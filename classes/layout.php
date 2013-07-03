@@ -32,8 +32,7 @@ Class layout{
 	
 	//
 	function createFooter(){
-		echo sprintf("	</body>
-				</html>");
+		echo sprintf("</body></html>");
 	}
 	
 	//
@@ -48,7 +47,7 @@ Class layout{
 	}
 	
 	//
-	function createFrameSet($frame_arr,$border=5){
+	function createFrameSet($frame_arr,$border="4px"){
 		$size_str="";
 		$frame_str="";
 		//
@@ -66,10 +65,21 @@ Class layout{
 		$img_str="";
 		//
 		foreach($images_arr as $i){
-			$img_str.=sprintf("<a href='%s' alt='%s' target='%s'><div class='menu_div'><img class='menu_img' src='%s'></img></div></a>",$i["url"],$i["name"],$frame,$i["img_src"]);
+			$img_str.=sprintf("	<a href='%s' alt='%s' target='%s'><div class='menu_div'>
+							<img class='menu_img' src='%s'></img>
+						</div></a>
+						",$i["url"],$i["name"],$frame,$i["img_src"]);
 		}
 		//
 		echo $img_str;
+	}
+	
+	//
+	function createPageTitleBar($title,$page_title){
+		echo sprintf("	<div class='page_title_bar'>
+					<div style='float:left;font-weight:bold;font-size:20px;'>%s</div>
+					<div class='font_rez' style='float:right;font-size:25px;'>%s</div>
+				</div>",$page_title,$title);
 	}
 }
 //
