@@ -83,17 +83,26 @@ Class layout{
 	}
 	
 	//
-	function createListRow(){
-		echo sprintf("	<div>
-				<table class='page_list_table'>
-				<tr>
-					<td class='page_list_td' style='width:10%s;'><span>we</span></td>
-					<td class='page_list_td' style='width:20%s;'><span>ciao</span></td>
-					<td class='page_list_td' style='width:30%s;'><span>testttttttttt</span></td>
-					<td class='page_list_td' style='width:40%s;'><span>wella</span></td>
-				</tr>
-				</table>
-				</div>","%","%","%","%");
+	function createList($fields,$values){
+		//open table
+		echo "<div><table class='page_list_table'>";
+		//
+		foreach($values as $row){
+			//open row
+			echo "<tr>";
+			foreach($row as $k=>$r){
+				//check if field is showed
+				if($fields[$k]){
+					$f=$fields[$k];
+					echo sprintf("<td class='page_list_td' style='width:%s;'><span>%s</span></td>",$f["width"],$r);
+				}
+				//
+			}
+			//close row
+			echo "</tr>";
+		}
+		//close table
+		echo "</table></div>";
 	}
 }
 //
