@@ -27,17 +27,19 @@
 }
 
 /*list*/
-.page_list_row{
-	height:20px;
+.page_list_table{
 	background-color:#eeeeee;
+	width:100%;
+	border:0px;
 }
 
-.page_list_field{
-	float:left;
+.page_list_td{
+	background-color:#ffffff;
 	height:18px;
-	border:1px;
 	border-style:solid;
 	border-color:#ffffff;
+	padding-left:5px;
+	font-size:14px;
 }
 
 /*menu*/

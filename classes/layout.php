@@ -84,11 +84,15 @@ Class layout{
 	
 	//
 	function createListRow(){
-		echo sprintf("	<div class='page_list_row'>
-					<div class='page_list_field' style='width:10%s;'><span>we</span></div>
-					<div class='page_list_field' style='width:20%s;'><span>ciao</span></div>
-					<div class='page_list_field' style='width:30%s;'><span>testttttttttt</span></div>
-					<div class='page_list_field' style='width:40%s;'><span>wella</span></div>
+		echo sprintf("	<div>
+				<table class='page_list_table'>
+				<tr>
+					<td class='page_list_td' style='width:10%s;'><span>we</span></td>
+					<td class='page_list_td' style='width:20%s;'><span>ciao</span></td>
+					<td class='page_list_td' style='width:30%s;'><span>testttttttttt</span></td>
+					<td class='page_list_td' style='width:40%s;'><span>wella</span></td>
+				</tr>
+				</table>
 				</div>","%","%","%","%");
 	}
 }
