@@ -89,7 +89,7 @@ Class layout{
 		//create list header
 		foreach($fields as $f){
 			//create th
-			echo sprintf("<th class='page_list_th' style='width:%s;'><span>%s</span></th>",$f["width"],$f["label"]);
+			echo sprintf("<th class='page_list_field' style='width:%s;'><span>%s</span></th>",$f["width"],$f["label"]);
 		}
 		//create list rows
 		foreach($values as $row){
@@ -100,7 +100,7 @@ Class layout{
 				if($fields[$k]){
 					$f=$fields[$k];
 					//create td
-					echo sprintf("<td class='page_list_td' style='width:%s;'><span>%s</span></td>",$f["width"],$r);
+					echo sprintf("<td class='page_list_field' style='width:%s;'><span>%s</span></td>",$f["width"],$r);
 				}
 				//
 			}
