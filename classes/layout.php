@@ -101,15 +101,22 @@ Class layout{
 	function createList($fields,$values){
 		//open table
 		echo "<div><table class='page_list_table'>";
+		//create td with action manu button
+		echo sprintf("<tr><td class='page_list_field' style='width:10px;'><span>O</span></td>");
 		//create list header
 		foreach($fields as $f){
 			//create th
 			echo sprintf("<th class='page_list_field' style='width:%s;'><span>%s</span></th>",$f["width"],$f["label"]);
 		}
+		//close th row
+		echo "</tr>";
 		//create list rows
 		foreach($values as $row){
 			//open row
 			echo "<tr>";
+			//create td with check bo
+			echo sprintf("<td class='page_list_field' style='width:10px;'><span>O</span></td>");
+			//
 			foreach($row as $k=>$r){
 				//check if field is showed
 				if($fields[$k]){
