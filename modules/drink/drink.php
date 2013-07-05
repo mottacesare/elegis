@@ -4,7 +4,15 @@ require_once("../../include.php");
 //
 $l->createHeader();
 $l->createPageTitleBar($def_title,$dict["TITLE_DRINK"]);
-//test single row
+//
+$sql=sprintf("	SELECT
+		*
+		
+		FROM
+		product");
+$res=$db->getRows($sql);
+pre($res);
+//
 $fields=array(
 	//
 	"name"=>array(
