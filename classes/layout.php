@@ -85,6 +85,19 @@ Class layout{
 	}
 	
 	//
+	function createIconBar($images_arr){
+		$img_str="";
+		//
+		foreach($images_arr as $i){
+			$img_str.=sprintf("	<div class='icon_bar_div' title='%s' onclick=\"%s\">
+							<img class='icon_bar_img' src='%s'></img>
+						</div>",$i["name"],$i["js"],$i["img_src"]);
+		}
+		//
+		echo $img_str;
+	}
+	
+	//
 	function createList($fields,$values){
 		//open table
 		echo "<div><table class='page_list_table'>";

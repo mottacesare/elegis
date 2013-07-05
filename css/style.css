@@ -28,7 +28,7 @@
 
 /*list*/
 .page_list_table{
-	background-color:#eeeeee;
+	background-color:#dddddd;
 	width:100%;
 	border:0px;
 }
@@ -49,15 +49,26 @@
 	padding:13px;
 }
 
-.menu_div:hover{
+/*.menu_div:hover{
 	background-color:#bbbbbb;
-}
+}*/
 
 .menu_img{
 	max-height:100%;
 	max-width:100%;
 }
 
+/*icon bar*/
+.icon_bar_div{
+	float:left;
+	background-color:#dddddd;
+	padding:10px;
+	height:20px;
+}
+
+.icon_bar_img{
+	height:20px;
+}
 
 /*d3 javascripts*/
 .d3_bc_node{

@@ -10,6 +10,6 @@ function highlightIconMenu(ref){
 		e.style.backgroundColor="#dddddd";
 	});
 	//
-	ref.style.backgroundColor="yellow";
+	ref.style.backgroundColor="#aaaaaa";
 }
 
