@@ -3,6 +3,7 @@
 require_once("../../include.php");
 //
 $l->createHeader();
+$l->addJavascripts(array("javascripts/menu.js"));
 //creazione di un array per le icone del menu
 $images_arr=array(
 	array(

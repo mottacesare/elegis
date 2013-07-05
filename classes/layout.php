@@ -24,6 +24,7 @@ Class layout{
 				
 				<link href=\"../../css/style.css\" rel=\"stylesheet\" type=\"text/css\">
 				
+				<script src='../../javascripts/jquery-1.10.2.js' type='text/javascript'></script>
 				<script src='../../javascripts/d3/d3.v3.min.js' type='text/javascript'></script>
 				
 				</head>
@@ -65,10 +66,11 @@ Class layout{
 		$img_str="";
 		//
 		foreach($images_arr as $i){
-			$img_str.=sprintf("	<a href='%s' alt='%s' target='%s'><div class='menu_div' title='%s'>
+			$img_str.=sprintf("	<a href='%s' alt='%s' target='%s'>
+						<div class='menu_div' title='%s' onclick=\"highlightIconMenu(this)\">
 							<img class='menu_img' src='%s'></img>
-						</div></a>
-						",$i["url"],$i["name"],$frame,$i["name"],$i["img_src"]);
+						</div>
+						</a>",$i["url"],$i["name"],$frame,$i["name"],$i["img_src"]);
 		}
 		//
 		echo $img_str;
