@@ -102,7 +102,7 @@ Class layout{
 		//open table
 		echo "<div><table class='page_list_table'>";
 		//create td with action manu button
-		echo sprintf("<tr><td class='page_list_field' style='width:10px;'><span>O</span></td>");
+		echo sprintf("<tr><td class='page_list_menu'></td>");
 		//create list header
 		foreach($fields as $f){
 			//create th
@@ -115,7 +115,7 @@ Class layout{
 			//open row
 			echo "<tr>";
 			//create td with check bo
-			echo sprintf("<td class='page_list_field' style='width:10px;'><span>O</span></td>");
+			echo sprintf("<td class='page_list_checkbox'><input type='checkbox' name='sel'/></td>");
 			//
 			foreach($row as $k=>$r){
 				//check if field is showed
