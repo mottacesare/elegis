@@ -7,6 +7,6 @@ require_once("classes/layout.php");
 $dict=$dict_arr["ITA"];
 //
 $l=new layout();
-$db=new database();
+$db=new db($db_name,$db_user,$db_passwd);
 //
 ?>
