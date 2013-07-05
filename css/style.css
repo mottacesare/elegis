@@ -43,16 +43,15 @@
 	font-size:14px;
 }
 
-.page_list_checkbox{
+.page_list_action{
 	background-color:#f7f7f7;
 	border-style:solid;
 	border-color:#f7f7f7;
+	width:1%;
 }
 
-.page_list_menu{
-	background-color:#f7f7f7;
-	border-style:solid;
-	border-color:#f7f7f7;
+.page_list_action_checkbox{
+
 }
 
 /*menu*/
