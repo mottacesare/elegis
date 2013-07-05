@@ -3,11 +3,11 @@
 Class database{
 	//
 	function __construct($db,$user,$passwd,$host="localhost") {
-		$this->host=$host;
+		$this->db=$db;
 		$this->user=$user;
 		$this->pass=$passwd;
-		$this->db=$db;
-		//wait for mysql error
+		$this->host=$host;
+		//wait for pg error
 		while(1){
 			$this->link=pg_connect(sprintf("dbname=%s user=%s password=%s host=%s" ,$this->db,$this->user,$this->pass,$this->host));
 			//if connected pass
@@ -17,33 +17,27 @@ Class database{
 				sleep(1);
 			}
 		}
-		//userID
-		$this->userID=0;		
 	}
 	
 	//
 	private function fix($field){
 		$res=preg_replace("/'/","`",$field);
-		//$res=addslashes($field);
+		//
 		return trim($res);
-	}
-	
-	//
-	public function setUserId($uid){
-		$this->userID=$uid;
 	}
 	
 	//
 	public function getResults($query){
 		$res=pg_query($this->link,$query);
-		if (!$res) {
-			//debug @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+		//
+		if(!$res) {
+			//
 			echo("<div id='errorbox'>$query</div>");
 			return -1;
 		}
-		//hold pointer
 		$this->res=$res;
-		return ($this->res);
+		//
+		return($this->res);
 	}
 	
 	//
@@ -55,8 +49,8 @@ Class database{
 		$rows=Null;
 		//
 		if($timeout>0){
-			$memcache = new Memcache;
-			$memcache->connect('127.0.0.1', 11211);
+			$memcache=new Memcache;
+			$memcache->connect('127.0.0.1',11211);
 			$cutted=False;
 			$rows=$memcache->get($code);
 		}
