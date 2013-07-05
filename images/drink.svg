@@ -14,7 +14,7 @@
    height="100"
    id="svg6584"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="d.svg">
+   sodipodi:docname="drink.svg">
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -50,38 +50,24 @@
     </rdf:RDF>
   </metadata>
   <g
-     id="g3006"
-     transform="matrix(1.0213458,0,0,1.0213458,-1.4108938,-1.7179795)">
-    <polygon
-       transform="matrix(0.14834853,0,0,0.14834853,1.3814066,1.6820773)"
+     id="g5197">
+    <path
        id="polygon4"
-       points="0,0 660,0 330,390 "
+       d="M 0 0 L 50 59.09375 L 100 0 L 0 0 z M 57.5625 22.71875 C 61.746475 22.71875 65.15625 26.128525 65.15625 30.3125 C 65.15625 34.496475 61.746475 37.875 57.5625 37.875 C 53.378525 37.875 50 34.496475 50 30.3125 C 50 26.128525 53.378525 22.71875 57.5625 22.71875 z "
        style="fill:#000000" />
     <line
        id="line6"
-       y2="38.186638"
-       x2="50.336422"
-       y1="91.59211"
-       x1="50.336422"
-       style="stroke:#000000;stroke-width:11.86788273" />
+       y2="39.393936"
+       x2="50"
+       y1="93.939392"
+       x1="50"
+       style="stroke:#000000;stroke-width:12.12121201" />
     <line
        id="line8"
-       y2="93.658165"
-       x2="78.522644"
-       y1="93.658165"
-       x1="22.1502"
-       style="stroke:#000000;stroke-width:11.86788273;stroke-linecap:round" />
-    <circle
-       transform="matrix(0.14834853,0,0,0.14834853,1.3814066,1.6820773)"
-       id="circle10"
-       r="50"
-       cy="200"
-       cx="380"
-       sodipodi:cx="380"
-       sodipodi:cy="200"
-       sodipodi:rx="50"
-       sodipodi:ry="50"
-       style="fill:#ffffff"
-       d="m 430,200 c 0,27.61424 -22.38576,50 -50,50 -27.61424,0 -50,-22.38576 -50,-50 0,-27.61424 22.38576,-50 50,-50 27.61424,0 50,22.38576 50,50 z" />
+       y2="93.939392"
+       x2="78.78788"
+       y1="93.939392"
+       x1="21.21212"
+       style="stroke:#000000;stroke-width:12.12121201;stroke-linecap:round" />
   </g>
 </svg>
