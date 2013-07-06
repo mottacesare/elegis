@@ -32,7 +32,11 @@ $fields=array(
 	//
 	"name"=>array(
 		"label"=>"Nome",
-		"width"=>"95%",
+		"width"=>"10%",
+		),
+	"description"=>array(
+		"label"=>"Descrizione",
+		"width"=>"85%",
 		),
 	"type"=>array(
 		"label"=>"Tipo",
