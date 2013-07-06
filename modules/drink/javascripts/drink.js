@@ -3,10 +3,18 @@ $(function(){
 	
 });
 
-//list
+//list checkbox
 function selCheckbox(ref){
 	//
-	$(ref).css('background-color','#aaaaaa');
+	var sel=$(ref).find('input')[0];
+	//
+	if(sel.value==0){
+		sel.value=1;
+		$(ref).css('background-color','#aaaaaa');
+	}else{
+		sel.value=0;
+		$(ref).css('background-color','#f7f7f7');
+	}
 }
 
 //img menu

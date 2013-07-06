@@ -113,9 +113,9 @@ Class layout{
 		//create list rows
 		foreach($values as $row){
 			//open row
-			echo "<tr>";
+			echo sprintf("<tr id=\"row_%s\">",$row["mainid"]);
 			//create td with fake checkbox
-			echo sprintf("<td class=\"page_list_action\"><div id=\"sel_0\" class=\"page_list_action_checkbox\" onclick=\"selCheckbox(this)\"><input type=\"hidden\" id=\"sel\" value=\"0\"></div></td>");
+			echo sprintf("<td class=\"page_list_action\" onclick=\"selCheckbox(this)\"><div class=\"page_list_action_checkbox\"><input type=\"hidden\" id=\"sel_%s\" value=\"0\"></div></td>",$row["mainid"]);
 			//
 			foreach($row as $k=>$r){
 				//check if field is showed

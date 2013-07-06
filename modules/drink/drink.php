@@ -6,6 +6,7 @@ $l->createHeader();
 $l->addJavascripts(array("javascripts/drink.js"));
 $l->createPageTitleBar($def_title,$dict["TITLE_DRINK"]);
 //
+//######################################################################################
 $images_arr=array(
 	array(
 		"name"=>$dict["NEW"],
@@ -13,11 +14,11 @@ $images_arr=array(
 		"img_src"=>"../../images/plus.svg",
 	),
 );
-//
 $l->createIconBar($images_arr);
 //
-//sql
+//######################################################################################
 $sql=sprintf("	SELECT
+		id AS mainid,
 		*
 		
 		FROM
@@ -26,15 +27,19 @@ $sql=sprintf("	SELECT
 		WHERE
 		type=0");
 $res=$db->getRows($sql);
-//field
+//
 $fields=array(
 	//
 	"name"=>array(
 		"label"=>"Nome",
 		"width"=>"95%",
 		),
+	"type"=>array(
+		"label"=>"Tipo",
+		"width"=>"5%",
+		),
 );
-//list
+//
 $l->createList($fields,$res["rows"]);
 //
 //
