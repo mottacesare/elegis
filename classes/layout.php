@@ -20,15 +20,15 @@ Class layout{
 	//
 	function createHeader(){
 		echo sprintf("	<html>
-				<head><meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'><title></title>
+				<head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\"><title></title>
 				
 				<link href=\"../../css/style.css\" rel=\"stylesheet\" type=\"text/css\">
 				
-				<script src='../../javascripts/jquery-1.10.2.js' type='text/javascript'></script>
-				<script src='../../javascripts/d3/d3.v3.min.js' type='text/javascript'></script>
+				<script src=\"../../javascripts/jquery-1.10.2.js\" type=\"text/javascript\"></script>
+				<script src=\"../../javascripts/d3/d3.v3.min.js\" type=\"text/javascript\"></script>
 				
 				</head>
-				<body class='page_body'>");
+				<body class=\"page_body\">");
 	}
 	
 	//
@@ -41,7 +41,7 @@ Class layout{
 		$js_str="";
 		//
 		foreach($js_arr as $j){
-			$js_str.=sprintf("<script src='%s' type='text/javascript'></script>",$j);
+			$js_str.=sprintf("<script src=\"%s\" type=\"text/javascript\"></script>",$j);
 		}
 		//
 		echo $js_str;
@@ -53,12 +53,12 @@ Class layout{
 		$frame_str="";
 		//
 		foreach($frame_arr as $f){
-			$frame_str.=sprintf("<frame src='%s' name='%s' frameborder='0' marginwidth='0' marginheight='0' bordercolor='#ffffff'>",$f["url"],$f["name"]);
+			$frame_str.=sprintf("<frame src=\"%s\" name=\"%s\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" bordercolor=\"#ffffff\">",$f["url"],$f["name"]);
 			$size_arr[]=$f["size"];
 		}
 		//
 		$size_str=implode(",",$size_arr);
-		echo sprintf("<frameset rows='*' cols='%s' framespacing='%s' frameborder='1' border='%s' noresize bordercolor='#ffffff'>%s</frameset>",$size_str,$border,$border,$frame_str);
+		echo sprintf("<frameset rows=\"*\" cols=\"%s\" framespacing=\"%s\" frameborder=\"1\" border=\"%s\" noresize bordercolor=\"#ffffff\">%s</frameset>",$size_str,$border,$border,$frame_str);
 	}
 	
 	//
@@ -66,9 +66,9 @@ Class layout{
 		$img_str="";
 		//
 		foreach($images_arr as $i){
-			$img_str.=sprintf("	<a href='%s' alt='%s' target='%s'>
-						<div class='menu_div' title='%s' onclick=\"highlightIconMenu(this)\">
-							<img class='menu_img' src='%s'></img>
+			$img_str.=sprintf("	<a href=\"%s\" alt=\"%s\" target=\"%s\">
+						<div class=\"menu_div\" title=\"%s\" onclick=\"highlightIconMenu(this)\">
+							<img class=\"menu_img\" src=\"%s\"></img>
 						</div>
 						</a>",$i["url"],$i["name"],$frame,$i["name"],$i["img_src"]);
 		}
@@ -78,9 +78,9 @@ Class layout{
 	
 	//
 	function createPageTitleBar($title,$page_title){
-		echo sprintf("	<div class='page_title_bar'>
-					<div style='float:left;font-weight:bold;font-size:20px;'>%s</div>
-					<div class='font_rez' style='float:right;font-size:25px;'>%s</div>
+		echo sprintf("	<div class=\"page_title_bar\">
+					<div style=\"float:left;font-weight:bold;font-size:20px;\">%s</div>
+					<div class=\"font_rez\" style=\"float:right;font-size:25px;\">%s</div>
 				</div>",$page_title,$title);
 	}
 	
@@ -89,8 +89,8 @@ Class layout{
 		$img_str="";
 		//
 		foreach($images_arr as $i){
-			$img_str.=sprintf("	<div class='icon_bar_div' title='%s' onclick=\"%s\">
-							<img class='icon_bar_img' src='%s'></img>
+			$img_str.=sprintf("	<div class=\"icon_bar_div\" title=\"%s\" onclick=\"%s\">
+							<img class=\"icon_bar_img\" src=\"%s\"></img>
 						</div>",$i["name"],$i["js"],$i["img_src"]);
 		}
 		//
@@ -100,13 +100,13 @@ Class layout{
 	//
 	function createList($fields,$values){
 		//open table
-		echo "<div><table class='page_list_table'>";
+		echo "<div><table class=\"page_list_table\">";
 		//create td with action manu button
-		echo sprintf("<tr><td class='page_list_action'></td>");
+		echo sprintf("<tr><td class=\"page_list_action\"></td>");
 		//create list header
 		foreach($fields as $f){
 			//create th
-			echo sprintf("<th class='page_list_field' style='width:%s;'><span>%s</span></th>",$f["width"],$f["label"]);
+			echo sprintf("<th class=\"page_list_field\" style=\"width:%s;\"><span>%s</span></th>",$f["width"],$f["label"]);
 		}
 		//close th row
 		echo "</tr>";
@@ -114,15 +114,15 @@ Class layout{
 		foreach($values as $row){
 			//open row
 			echo "<tr>";
-			//create td with check bo
-			echo sprintf("<td class='page_list_action'><input type='checkbox' class='page_list_action_checkbox' name='sel'/></td>");
+			//create td with fake checkbox
+			echo sprintf("<td class=\"page_list_action\"><div id=\"sel_0\" class=\"page_list_action_checkbox\" onclick=\"selCheckbox(this)\"><input type=\"hidden\" id=\"sel\" value=\"0\"></div></td>");
 			//
 			foreach($row as $k=>$r){
 				//check if field is showed
 				if($fields[$k]){
 					$f=$fields[$k];
 					//create td
-					echo sprintf("<td class='page_list_field' style='width:%s;'><span>%s</span></td>",$f["width"],$r);
+					echo sprintf("<td class=\"page_list_field\" style=\"width:%s;\"><span>%s</span></td>",$f["width"],$r);
 				}
 				//
 			}

@@ -7,9 +7,9 @@ $(function(){
 function highlightIconMenu(ref){
 	//
 	$(".menu_div").each(function(i,e){
-		e.style.backgroundColor="#dddddd";
+		$(e).css('background-color','#dddddd');
 	});
 	//
-	ref.style.backgroundColor="#aaaaaa";
+	$(ref).css('background-color','#aaaaaa');
 }
 
