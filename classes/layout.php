@@ -25,6 +25,7 @@ Class layout{
 				<link href=\"../../css/style.css\" rel=\"stylesheet\" type=\"text/css\">
 				
 				<script src=\"../../javascripts/jquery-1.10.2.js\" type=\"text/javascript\"></script>
+				<script src=\"../../javascripts/utils.js\" type=\"text/javascript\"></script>
 				<script src=\"../../javascripts/d3/d3.v3.min.js\" type=\"text/javascript\"></script>
 				
 				</head>
@@ -115,7 +116,7 @@ Class layout{
 			//open row
 			echo sprintf("<tr id=\"row_%s\">",$row["mainid"]);
 			//create td with fake checkbox
-			echo sprintf("<td class=\"page_list_action\" onclick=\"selCheckbox(this)\"><div class=\"page_list_action_checkbox\"><input type=\"hidden\" id=\"sel_%s\" value=\"0\"></div></td>",$row["mainid"]);
+			echo sprintf("<td class=\"page_list_action\" onclick=\"__selCheckbox(this)\"><div class=\"page_list_action_checkbox\"><input type=\"hidden\" id=\"sel_%s\" value=\"0\"></div></td>",$row["mainid"]);
 			//create row
 			foreach($fields as $k=>$f){
 				echo sprintf("<td class=\"page_list_field\" style=\"width:%s;\"><span>%s</span></td>",$f["width"],$row[$k]);
