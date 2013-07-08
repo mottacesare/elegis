@@ -19,5 +19,6 @@ function __selCheckbox(ref){
 	//change color on all td in the same row of checkbox
 	$(ref).siblings().each(function(i,e){
 		$(e).css('background-color',td_color);
+		$(e).css('border-color',td_color);
 	});
 }
