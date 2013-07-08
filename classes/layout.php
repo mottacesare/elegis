@@ -102,7 +102,7 @@ Class layout{
 	//
 	function createList($fields,$values){
 		//open table
-		echo "<div><table class=\"page_list_table\">";
+		echo "<div><table id=\"our_table\" class=\"page_list_table\">";
 		//create td with action manu button
 		echo sprintf("<tr><td class=\"page_list_action\"></td>");
 		//create list header
@@ -117,7 +117,7 @@ Class layout{
 			//open row
 			echo sprintf("<tr id=\"row_%s\">",$row["mainid"]);
 			//create td with fake checkbox
-			echo sprintf("<td class=\"page_list_action\" onclick=\"__selCheckbox(this)\"><div class=\"page_list_action_checkbox\"><input type=\"hidden\" id=\"sel_%s\" value=\"0\"></div></td>",$row["mainid"]);
+			echo sprintf("<td class=\"page_list_action\"><div class=\"page_list_action_checkbox\"><input type=\"hidden\" id=\"sel_%s\" value=\"0\"></div></td>",$row["mainid"]);
 			//create row
 			foreach($fields as $k=>$f){
 				echo sprintf("<td class=\"page_list_field\" style=\"width:%s;\"><span>%s</span></td>",$f["width"],$row[$k]);

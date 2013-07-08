@@ -107,3 +107,14 @@
 	font-family:sans-serif;
 	font-size:10px;
 }
+
+/*test*/
+table td {
+  background-color:#ccc;
+  border:1px solid #fff;
+}
+
+table td.highlighted {
+  background-color:#999;
+}
+
