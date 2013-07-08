@@ -8,7 +8,7 @@ Class layout{
 	//
 	function createIndexHeader($title){
 		echo sprintf("	<html>
-				<head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\"><title>%s</title></head>",$title);
+				<head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"><title>%s</title></head>",$title);
 	}
 	
 	//
@@ -20,7 +20,7 @@ Class layout{
 	//
 	function createHeader(){
 		echo sprintf("	<html>
-				<head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\"><title></title>
+				<head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"><title></title>
 				
 				<link href=\"../../css/style.css\" rel=\"stylesheet\" type=\"text/css\">
 				
