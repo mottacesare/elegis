@@ -102,9 +102,9 @@ Class layout{
 	//
 	function createList($fields,$values){
 		//open table
-		echo "<div><table id=\"our_table\" class=\"page_list_table\">";
+		echo "<div><table id=\"page_list_table\" class=\"page_list_table\">";
 		//create td with action manu button
-		echo sprintf("<tr><td class=\"page_list_action\"></td>");
+		echo sprintf("<tr><th class=\"page_list_action\"></th>");
 		//create list header
 		foreach($fields as $f){
 			//create th
