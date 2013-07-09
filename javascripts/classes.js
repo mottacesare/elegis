@@ -28,13 +28,16 @@ function jqueryTable(){
 		.mousedown(function(){
 			isMouseDown=true;
 			currentCol=this.getAttribute("data-col");
-			$(this).toggleClass("page_list_action_highlighted");
+			$(this).toggleClass("page_list_td_highlighted");
+			//other td
+			$(this).siblings().each(function(i,e){
+				$(e).toggleClass("page_list_td_highlighted");
+			});
 			//
-			isHighlighted=$(this).hasClass("page_list_action_highlighted");
+			isHighlighted=$(this).hasClass("page_list_td_highlighted");
 			//
 			sel=$(this).find('input')[0];
 			sel.value=isHighlighted;
-			console.log(sel.value);
 			//
 			return false; // prevent text selection
 		})
@@ -42,11 +45,14 @@ function jqueryTable(){
 		.mouseover(function(){
 			if(isMouseDown){
 				if(currentCol===this.getAttribute("data-col")){
-					$(this).toggleClass("page_list_action_highlighted",isHighlighted);
+					$(this).toggleClass("page_list_td_highlighted",isHighlighted);
+					//other td
+					$(this).siblings().each(function(i,e){
+						$(e).toggleClass("page_list_td_highlighted",isHighlighted);
+					});
 					//
 					sel=$(this).find('input')[0];
 					sel.value=isHighlighted;
-					console.log(sel.value);
 				}
 			}
 		})

@@ -50,8 +50,9 @@
 	width:1%;
 }
 
-.page_list_action_highlighted{
+.page_list_td_highlighted{
 	background-color:#aaaaaa;
+	border-color:#aaaaaa;
 }
 
 .page_list_action_checkbox{
