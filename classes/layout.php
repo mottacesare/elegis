@@ -128,7 +128,7 @@ Class layout{
 					}else if($row[$k]==1 || $row[$k]==true){
 						$bool_img="../../images/check.svg";
 					}
-					echo sprintf("<td align=\"center\" class=\"page_list_field\" style=\"width:%s;\"><img class=\"icon_bar_img\" src=\"%s\"></img></td>",$f["width"],$bool_img);
+					echo sprintf("<td class=\"page_list_field\" style=\"width:%s;text-align:center;\"><img class=\"icon_bar_img\" src=\"%s\"></img></td>",$f["width"],$bool_img);
 				}
 				//text field
 				else{
