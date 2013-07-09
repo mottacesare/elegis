@@ -120,7 +120,20 @@ Class layout{
 			echo sprintf("<td class=\"page_list_action\"><div class=\"page_list_action_checkbox\"><input type=\"hidden\" id=\"sel_%s\" value=\"false\"></div></td>",$row["mainid"]);
 			//create row
 			foreach($fields as $k=>$f){
-				echo sprintf("<td class=\"page_list_field\" style=\"width:%s;\"><span>%s</span></td>",$f["width"],$row[$k]);
+				//flag field
+				if($f["type"]=="bool"){
+					$bool_img="";
+					if($row[$k]==0 || $row[$k]==false){
+						$bool_img="";
+					}else if($row[$k]==1 || $row[$k]==true){
+						$bool_img="../../images/check.svg";
+					}
+					echo sprintf("<td class=\"page_list_field\" style=\"width:%s;\"><img class=\"icon_bar_img\" src=\"%s\"></img></td>",$f["width"],$bool_img);
+				}
+				//text field
+				else{
+					echo sprintf("<td class=\"page_list_field\" style=\"width:%s;\"><span>%s</span></td>",$f["width"],$row[$k]);
+				}
 			}
 			//close row
 			echo "</tr>";

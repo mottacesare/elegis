@@ -38,6 +38,11 @@ $fields=array(
 		"label"=>"Descrizione",
 		"width"=>"85%",
 		),
+	"enabled"=>array(
+		"label"=>"Abilitato",
+		"width"=>"5%",
+		"type"=>"bool",
+		),
 );
 //
 $l->createList($fields,$res["rows"]);
