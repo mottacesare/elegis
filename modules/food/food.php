@@ -3,9 +3,22 @@
 require_once("../../include.php");
 //
 $l->createHeader();
+$l->addJavascripts(array("javascripts/food.js"));
 $l->createPageTitleBar($def_title,$dict["TITLE_FOOD"]);
-//sql
+//
+//######################################################################################
+$images_arr=array(
+	array(
+		"name"=>$dict["NEW"],
+		"js"=>"insert();",
+		"img_src"=>"../../images/plus.svg",
+	),
+);
+$l->createIconBar($images_arr);
+//
+//######################################################################################
 $sql=sprintf("	SELECT
+		id AS mainid,
 		*
 		
 		FROM
@@ -14,16 +27,21 @@ $sql=sprintf("	SELECT
 		WHERE
 		type=1");
 $res=$db->getRows($sql);
-//field
+//
 $fields=array(
 	//
 	"name"=>array(
 		"label"=>"Nome",
-		"width"=>"95%",
+		"width"=>"10%",
+		),
+	"description"=>array(
+		"label"=>"Descrizione",
+		"width"=>"85%",
 		),
 );
-//list
+//
 $l->createList($fields,$res["rows"]);
+//
 //
 $l->createFooter();
 //

@@ -38,10 +38,6 @@ $fields=array(
 		"label"=>"Descrizione",
 		"width"=>"85%",
 		),
-	"type"=>array(
-		"label"=>"Tipo",
-		"width"=>"5%",
-		),
 );
 //
 $l->createList($fields,$res["rows"]);
