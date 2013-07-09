@@ -50,6 +50,10 @@
 	width:1%;
 }
 
+.page_list_action_highlighted{
+	background-color:#aaaaaa;
+}
+
 .page_list_action_checkbox{
 	width:18px;
 	height:18px;
@@ -107,14 +111,3 @@
 	font-family:sans-serif;
 	font-size:10px;
 }
-
-/*test*/
-table td {
-  background-color:#ccc;
-  border:1px solid #fff;
-}
-
-table td.highlighted {
-  background-color:#999;
-}
-

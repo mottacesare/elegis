@@ -21,32 +21,43 @@ function jqueryTable(){
 	var isMouseDown=false;
 	var isHighlighted;
 	var currentCol;
+	var sel;
 	//
 	$("#page_list_table td.page_list_action")
 		//
 		.mousedown(function(){
-			isMouseDown = true;
-			currentCol = this.getAttribute("data-col");
-			$(this).toggleClass("highlighted");
-			isHighlighted = $(this).hasClass("highlighted");
+			isMouseDown=true;
+			currentCol=this.getAttribute("data-col");
+			$(this).toggleClass("page_list_action_highlighted");
+			//
+			isHighlighted=$(this).hasClass("page_list_action_highlighted");
+			//
+			sel=$(this).find('input')[0];
+			sel.value=isHighlighted;
+			console.log(sel.value);
+			//
 			return false; // prevent text selection
 		})
 		//
 		.mouseover(function(){
-			if (isMouseDown) {
-				if(currentCol === this.getAttribute("data-col")){
-					$(this).toggleClass("highlighted", isHighlighted);
+			if(isMouseDown){
+				if(currentCol===this.getAttribute("data-col")){
+					$(this).toggleClass("page_list_action_highlighted",isHighlighted);
+					//
+					sel=$(this).find('input')[0];
+					sel.value=isHighlighted;
+					console.log(sel.value);
 				}
 			}
 		})
 		//
-		.bind("selectstart", function(){
+		.bind("selectstart",function(){
 			return false;
 		})
 	
 	$(document)
 		//
 		.mouseup(function(){
-			isMouseDown = false;
+			isMouseDown=false;
 		});
 }
