@@ -1,8 +1,8 @@
 <?php
 //
 $db_name="elegis";
-$db_user="";
-$db_passwd="";
+$db_user="elegis";
+$db_passwd="elegis";
 //
 $def_title="Elegis";
 //

@@ -3,9 +3,9 @@
 DB="elegis"
 
 function do_reload {
-	echo "drop database $DB" | psql -hlocalhost -Uovas postgres
-	echo "create database $DB" | psql -hlocalhost -Uovas postgres
-	gunzip < $DB.sql.gz | psql -hlocalhost -Uovas $DB -f -
+	echo "drop database $DB" | psql -hlocalhost -Uelegis postgres
+	echo "create database $DB" | psql -hlocalhost -Uelegis postgres
+	gunzip < $DB.sql.gz | psql -hlocalhost -Uelegis $DB -f -
 }
 
 read -p "Continue (y/n)?" choice
