@@ -26,7 +26,6 @@ Class layout{
 				
 				<script src=\"../../javascripts/jquery-1.10.2.js\" type=\"text/javascript\"></script>
 				<script src=\"../../javascripts/classes.js\" type=\"text/javascript\"></script>
-				<script src=\"../../javascripts/utils.js\" type=\"text/javascript\"></script>
 				<script src=\"../../javascripts/d3/d3.v3.min.js\" type=\"text/javascript\"></script>
 				
 				</head>

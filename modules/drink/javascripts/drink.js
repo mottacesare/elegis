@@ -5,9 +5,8 @@ $(function(){
 
 //
 function insert(){
-	//
-	//alert("INSERT");
-	//
-	
+	//append overlay trasparent and page to body
+	$("body").append("<div id='overlay'></div>");
+	$("body").append("<div id='subpage'></div>");
 }
 

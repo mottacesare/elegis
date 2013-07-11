@@ -67,3 +67,7 @@ function jqueryTable(){
 			isMouseDown=false;
 		});
 }
+
+function jqueryOverlay(){
+	
+}
