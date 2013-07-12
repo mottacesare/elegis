@@ -6,7 +6,6 @@ $(function(){
 
 //
 function insert(){
-	//var jo=new jqueryOverlay("../food/food.php");
-	jo.create("../drink/drink.php");
+	jo.create("../food/food.php");
 }
 
