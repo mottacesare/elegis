@@ -1,0 +1,14 @@
+<?php
+//
+require_once("../../include.php");
+//
+$l->createHeader();
+//$l->addJavascripts(array("javascripts/list_table.js"));
+$l->createPageTitleBar($def_title,$dict["TITLE_TABLE"]);
+//
+//######################################################################################
+//
+//
+$l->createFooter();
+//
+?>
