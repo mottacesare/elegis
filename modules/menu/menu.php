@@ -13,12 +13,12 @@ $images_arr=array(
 	),
 	array(
 		"name"=>$dict["TITLE_DRINK"],
-		"url"=>"../drink/drink.php",
+		"url"=>"../drink/list_drink.php",
 		"img_src"=>"../../images/drink.svg",
 	),
 	array(
 		"name"=>$dict["TITLE_FOOD"],
-		"url"=>"../food/food.php",
+		"url"=>"../food/list_food.php",
 		"img_src"=>"../../images/food.svg",
 	),
 	array(

@@ -68,14 +68,26 @@ function jqueryTable(){
 		});
 }
 
+/*function jqueryOverlay(ref){
+	//append overlay trasparent and page to body
+	$("body").append("<div id='overlay'></div>");
+	$("body").append("<div class='overlay_page'></div>");
+	$(".overlay_page").load(ref);
+	
+	$("#overlay").click(function(){
+		$(".overlay_page").remove();
+		$("#overlay").remove();
+	})
+}*/
+
 function jqueryOverlay(){
-	this.last_id=null;
+	this.last_id=0;
 	
 	//create overlay
 	this.create=function(ref){
 		//append overlay trasparent and page to body
-		$("body").append("<div id=\"overlay\"></div>");
-		$("body").append("<div class=\"overlay_page\"></div>");
+		$("body").append("<div id='overlay'></div>");
+		$("body").append("<div class='overlay_page'></div>");
 		$(".overlay_page").load(ref);
 	
 		$("#overlay").click(function(){
