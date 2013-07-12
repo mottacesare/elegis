@@ -22,6 +22,11 @@ $images_arr=array(
 		"img_src"=>"../../images/food.svg",
 	),
 	array(
+		"name"=>$dict["TITLE_TABLE"],
+		"url"=>"../table/list_table.php",
+		"img_src"=>"../../images/table.svg",
+	),
+	array(
 		"name"=>$dict["TITLE_MESSAGE"],
 		"url"=>"../message/message.php",
 		"img_src"=>"../../images/message.svg",
