@@ -7,11 +7,11 @@ $l->addJavascripts(array("javascripts/inup_drink.js"));
 $l->createPageTitleBar($def_title,$dict["INSERT_DRINK"]);
 //
 //######################################################################################
-$l->createInupForm(
+/*$l->createInupForm(
 	array(
 	"name",
 	)
-);
+);*/
 //
 //
 $l->createFooter();

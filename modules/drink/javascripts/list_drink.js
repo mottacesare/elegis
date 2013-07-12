@@ -6,6 +6,6 @@ $(function(){
 
 //
 function insert(){
-	jo.create("../drink/insert_drink.php");
+	jo.create("../drink/inup_drink.php");
 }
 
