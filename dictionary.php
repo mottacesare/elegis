@@ -13,6 +13,7 @@ $dict_arr=array(
 		"TITLE_FOOD"=>"Vivande",
 		//
 		"TITLE_TABLE"=>"Tavoli",
+		"MANAGE_TABLE"=>"Gestisci Tavolo",
 		//
 		"TITLE_MESSAGE"=>"Messaggi",
 		//
@@ -29,6 +30,7 @@ $dict_arr=array(
 		"TITLE_FOOD"=>"Food",
 		//
 		"TITLE_TABLE"=>"Table",
+		"MANAGE_TABLE"=>"Manage Table",
 		//
 		"TITLE_MESSAGE"=>"Message",
 		//
