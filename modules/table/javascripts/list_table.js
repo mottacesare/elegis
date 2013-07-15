@@ -3,20 +3,19 @@ $(window).load(function(){
 	//
 	svg.find(".svg_table").each(function(i,e){
 		//
-		$(e).mouseover(function(ref){
-			console.log(ref);
+		$(e).mouseover(function(){
+			e.style.setProperty("stroke","#EFE697", "");
+			e.style.setProperty("stroke-width","5px", "");
 		});
+		
 		//
-		$(e).mouseout(function(ref){
-			console.log(ref);
+		$(e).mouseout(function(){
+			e.style.setProperty("stroke-width","0px", "");
 		});
+		
 		//
-		$(e).click(function(ref){
-			console.log(ref);
+		$(e).click(function(){
+			
 		});
 	});
-	
-	
-	/*t01=svg.getElementById("T01");
-	t01.style.setProperty("fill","red", "");*/
 });
