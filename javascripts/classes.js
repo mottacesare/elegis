@@ -96,3 +96,29 @@ function jqueryOverlay(){
 		})
 	}
 }
+
+function jqueryCsv(filename,classname,callback){
+	this.filename=filename;
+	this.classname=classname;
+	this.svg=$(document.getElementById(this.filename).getSVGDocument());
+	//
+	this.svg.find(this.classname).each(function(i,e){
+		//
+		$(e).mouseover(function(){
+			e.style.setProperty("stroke","#EFE697", "");
+			e.style.setProperty("stroke-width","5px", "");
+		});
+		//
+		$(e).mouseout(function(){
+			e.style.setProperty("stroke-width","0px", "");
+		});
+		//
+		$(e).click(function(){
+			callback(e.id);
+			/*$(e).siblings(this.classname).each(function(ii,ee){
+				ee.style.setProperty("stroke-width","0px", "");
+			});*/
+			//
+		});
+	});
+}
