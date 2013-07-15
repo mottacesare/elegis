@@ -1,7 +1,9 @@
 $(window).load(function(){
-	var svg=$(document.getElementById("svg_plan").getSVGDocument());
+	var filename="svg_plan";
+	var classname=".svg_table";
+	var svg=$(document.getElementById(filename).getSVGDocument());
 	//
-	svg.find(".svg_table").each(function(i,e){
+	svg.find(classname).each(function(i,e){
 		//
 		$(e).mouseover(function(){
 			e.style.setProperty("stroke","#EFE697", "");
@@ -14,8 +16,10 @@ $(window).load(function(){
 		});
 		
 		//
-		$(e).click(function(){
-			
+		$(e).click(function(ref){
+			$(e).siblings(classname).each(function(ii,ee){
+				ee.style.setProperty("stroke-width","0px", "");
+			});
 		});
 	});
 });
