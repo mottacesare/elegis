@@ -18,6 +18,8 @@ var person = new Person("Bob", "M");
 person.speak(); // alerts "Howdy, my name is Bob"*/
 
 function jqueryTable(){
+	//
+	//overmouse selector ##################################################################################################################
 	var isMouseDown=false;
 	var isHighlighted;
 	var currentCol;
@@ -66,6 +68,14 @@ function jqueryTable(){
 		.mouseup(function(){
 			isMouseDown=false;
 		});
+	//
+	//action menu ##################################################################################################################
+	jom=new jqueryOverlayMenu();
+	
+	$("#page_list_table th.page_list_action")
+		.click(function(){
+			jom.show();
+		});
 }
 
 function getSelectedCheck(){
@@ -77,6 +87,17 @@ function getSelectedCheck(){
 		}
 	});
 	return tot_sel;
+}
+
+
+function jqueryOverlayMenu(){
+	//append overlay menu not visible
+	$("body").append("<div id='overlay_menu'></div>");
+	
+	//create overlay menu
+	this.show=function(){
+		$("#overlay_menu").css('visibility','visible');
+	}
 }
 
 function jqueryOverlay(){
