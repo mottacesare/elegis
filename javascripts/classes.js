@@ -73,8 +73,16 @@ function jqueryTable(){
 	jom=new jqueryOverlayMenu();
 	
 	$("#page_list_table th.page_list_action")
-		.click(function(){
-			jom.show();
+		//
+		.click(function(event){
+			jom.setVisibility(true);
+			event.stopPropagation();
+		});
+	//
+	$(document)
+		//
+		.click(function(ref){
+			jom.setVisibility(false);
 		});
 }
 
@@ -94,9 +102,13 @@ function jqueryOverlayMenu(){
 	//append overlay menu not visible
 	$("body").append("<div id='overlay_menu'></div>");
 	
-	//create overlay menu
-	this.show=function(){
-		$("#overlay_menu").css('visibility','visible');
+	//show overlay menu
+	this.setVisibility=function(value){
+		if(value==true){
+			$("#overlay_menu").css('visibility','visible');
+		}else{
+			$("#overlay_menu").css('visibility','hidden');
+		}
 	}
 }
 
