@@ -68,17 +68,16 @@ function jqueryTable(){
 		});
 }
 
-/*function jqueryOverlay(ref){
-	//append overlay trasparent and page to body
-	$("body").append("<div id='overlay'></div>");
-	$("body").append("<div class='overlay_page'></div>");
-	$(".overlay_page").load(ref);
-	
-	$("#overlay").click(function(){
-		$(".overlay_page").remove();
-		$("#overlay").remove();
-	})
-}*/
+function getSelectedCheck(){
+	var tot_sel=0;
+	//
+	$("#page_list_table td.page_list_action").each(function(i,e){
+		if($(this).find('input')[0].value=="true"){
+			tot_sel+=1;
+		}
+	});
+	return tot_sel;
+}
 
 function jqueryOverlay(){
 	this.last_id=0;
@@ -89,7 +88,7 @@ function jqueryOverlay(){
 		$("body").append("<div id='overlay'></div>");
 		$("body").append("<div class='overlay_page'></div>");
 		$(".overlay_page").load(ref);
-	
+		
 		$("#overlay").click(function(){
 			$(".overlay_page").remove();
 			$("#overlay").remove();

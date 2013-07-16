@@ -81,7 +81,7 @@ Class layout{
 	function createPageTitleBar($title,$page_title){
 		echo sprintf("	<div class=\"page_title_bar\">
 					<div style=\"float:left;font-weight:bold;font-size:20px;\">%s</div>
-					<div class=\"font_rez\" style=\"float:right;font-size:25px;\">%s</div>
+					<div class=\"font_rez\" style=\"float:right;font-size:25px;\" ondblclick=\"alert('Yeah!')\">%s</div>
 				</div>",$page_title,$title);
 	}
 	
@@ -103,7 +103,7 @@ Class layout{
 		//open table
 		echo "<div><table id=\"page_list_table\" class=\"page_list_table\">";
 		//create td with action manu button
-		echo sprintf("<tr><th class=\"page_list_action\"></th>");
+		echo sprintf("<tr><th class=\"page_list_action\"><img id=\"menu_field\" class=\"icon_bar_img\" src=\"../../images/menu.svg\"></img></th>");
 		//create list header
 		foreach($fields as $f){
 			//create th
