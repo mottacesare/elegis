@@ -19,6 +19,22 @@ person.speak(); // alerts "Howdy, my name is Bob"*/
 
 function jqueryTable(){
 	//
+	//action menu ##################################################################################################################
+	var jom=new jqueryOverlayMenu();
+	
+	$("#page_list_table th.page_list_action")
+		//
+		.mousedown(function(event){
+			event.stopPropagation();
+			jom.setVisibility(true);
+		});
+	//
+	$(document)
+		//
+		.mousedown(function(){
+			jom.setVisibility(false);
+		});
+	//
 	//overmouse selector ##################################################################################################################
 	var isMouseDown=false;
 	var isHighlighted;
@@ -41,6 +57,7 @@ function jqueryTable(){
 			sel=$(this).find('input')[0];
 			sel.value=isHighlighted;
 			//
+			jom.setVisibility(false);
 			return false; // prevent text selection
 		})
 		//
@@ -67,22 +84,6 @@ function jqueryTable(){
 		//
 		.mouseup(function(){
 			isMouseDown=false;
-		});
-	//
-	//action menu ##################################################################################################################
-	jom=new jqueryOverlayMenu();
-	
-	$("#page_list_table th.page_list_action")
-		//
-		.click(function(event){
-			jom.setVisibility(true);
-			event.stopPropagation();
-		});
-	//
-	$(document)
-		//
-		.click(function(ref){
-			jom.setVisibility(false);
 		});
 }
 
