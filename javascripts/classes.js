@@ -58,7 +58,7 @@ function jqueryTable(){
 			sel.value=isHighlighted;
 			//
 			jom.setVisibility(false);
-			return false; // prevent text selection
+			return false;
 		})
 		//
 		.mouseover(function(){
