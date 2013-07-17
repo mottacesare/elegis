@@ -5,12 +5,17 @@ $(function(){
 		{
 		"label":"Test",
 		"icon":"../../images/drink.svg",
-		"action":function(){alert('test')}
+		"action":testAlert
 		},
 		{
 		"label":"Prova",
 		"icon":"../../images/food.svg",
-		"action":function(){alert('prova')}
+		"action":testAlert
+		},
+		{
+		"label":"We",
+		"icon":"../../images/message.svg",
+		"action":testAlert
 		},
 	];
 	//
@@ -20,9 +25,9 @@ $(function(){
 
 //actions ##################################################################################################################
 //
-/*function insert(){
-	jo.create("inup_drink.php");
-}*/
+function testAlert(){
+	alert("we");
+}
 
 //functions ##################################################################################################################
 //

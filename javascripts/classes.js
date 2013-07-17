@@ -103,7 +103,7 @@ function jqueryOverlayMenu(action,menu_weight){
 	$("body").append("<div id='overlay_menu' style='width:"+menu_weight+"px'></div>");
 	//append action in overlay menu
 	$(action).each(function(i,e){
-		$("#overlay_menu").append("<div class=\"overlay_menu_action\" onclick=\"alert()\"><img class=\"icon_bar_img\" style=\"width:14px;height:14px;vertical-align:middle\" src=\""+e["icon"]+"\"></img><span style=\"padding-left:6px;\">"+e["label"]+"<span></div>");
+		$("#overlay_menu").append("<div class=\"overlay_menu_action\" onmousedown=\"alert('we')\"><img class=\"icon_bar_img\" style=\"width:14px;height:14px;vertical-align:middle\" src=\""+e["icon"]+"\"></img><span style=\"padding-left:6px;\">"+e["label"]+"<span></div>");
 	});
 	
 	//show overlay menu
