@@ -17,10 +17,10 @@ var person = new Person("Bob", "M");
 // Invoke methods like this
 person.speak(); // alerts "Howdy, my name is Bob"*/
 
-function jqueryTable(){
+function jqueryTable(action,menu_weight){
 	//
 	//action menu ##################################################################################################################
-	var jom=new jqueryOverlayMenu();
+	var jom=new jqueryOverlayMenu(action,menu_weight);
 	
 	$("#page_list_table th.page_list_action")
 		//
@@ -98,10 +98,13 @@ function getSelectedCheck(){
 	return tot_sel;
 }
 
-
-function jqueryOverlayMenu(){
+function jqueryOverlayMenu(action,menu_weight){
 	//append overlay menu not visible
-	$("body").append("<div id='overlay_menu'></div>");
+	$("body").append("<div id='overlay_menu' style='width:"+menu_weight+"px'></div>");
+	//append action in overlay menu
+	$(action).each(function(i,e){
+		$("#overlay_menu").append("<div class=\"overlay_menu_action\" onclick=\"alert()\"><img class=\"icon_bar_img\" style=\"width:14px;height:14px;vertical-align:middle\" src=\""+e["icon"]+"\"></img><span style=\"padding-left:6px;\">"+e["label"]+"<span></div>");
+	});
 	
 	//show overlay menu
 	this.setVisibility=function(value){
