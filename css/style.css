@@ -113,6 +113,7 @@
 	z-index:1500;
 }
 
+/*popup action menu*/
 #overlay_menu{
 	visibility:hidden;
 	position:absolute;
@@ -133,6 +134,14 @@
 	font-weight:bold;
 	background-color:#f7f7f7;
 	cursor:default;
+}
+
+/*stat rect*/
+.stat_rect{
+	position:absolute;
+	background-color:#f7f7f7;
+	box-shadow: 0 0 12px #666666;
+	font-weight:bold;
 }
 
 /*d3 javascripts*/

@@ -140,6 +140,17 @@ Class layout{
 		//close table
 		echo "</table></div>";
 	}
+	
+	//
+	function createStatRect(){
+		//
+		echo sprintf("<div class=\"stat_rect\" style=\"top:100px;left:100px;width:200px;height:200px;font-size:30px;\"><span>We</span></div>");
+		echo sprintf("<div class=\"stat_rect\" style=\"top:100px;left:400px;width:200px;height:200px;font-size:30px;\"><span>We</span></div>");
+		echo sprintf("<div class=\"stat_rect\" style=\"top:400px;left:100px;width:200px;height:200px;font-size:30px;\"><span>We</span></div>");
+		echo sprintf("<div class=\"stat_rect\" style=\"top:400px;left:400px;width:200px;height:200px;font-size:30px;\"><span>We</span></div>");
+		
+		echo sprintf("<div class=\"stat_rect\" style=\"top:100px;left:700px;width:500px;height:500px;font-size:30px;\"><span>We</span></div>");
+	}
 }
 //
 ?>
